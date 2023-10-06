@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Homepage from './pages/Homepage';
+import Ball from './components/Ball';
+import Playground from './pages/Playground';
+import HumanCheck from './pages/HumanCheck';
+import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
+  const router = createBrowserRouter([
+    {path:'/', element:<Homepage></Homepage>}, 
+    {path: 'playground', element: <Playground></Playground>},
+    {path: 'check', element: <HumanCheck></HumanCheck>}
+    
+])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <RouterProvider router={router}></RouterProvider>
+   </div>
   );
 }
 

@@ -1,0 +1,30 @@
+.ball-button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .ball {
+        width: 50px;
+        height: 50px;
+        background-color: #3498db;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .ball.dropped {
+        transform: translateY(300px);
+      }
+      
+      .fall-button,
+      .try-again-button {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
